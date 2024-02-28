@@ -1,0 +1,15 @@
+{
+  "version": 2,
+  "dgSpecHash": "5Sryq9HFG0tt67KIpTHBtWhJmf4lHXhM3o8c8BVvBOtLMgQbsOy5XfuRhmw9gLDn0pkx3E8kNd8+YqjHXacnPw==",
+  "success": true,
+  "projectFilePath": "D:\\Rider Project Folder\\gRPC_MailServer\\gRPC_MailClient\\gRPC_MailClient.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\rasto\\.nuget\\packages\\google.protobuf\\3.25.3\\google.protobuf.3.25.3.nupkg.sha512",
+    "C:\\Users\\rasto\\.nuget\\packages\\grpc.core.api\\2.60.0\\grpc.core.api.2.60.0.nupkg.sha512",
+    "C:\\Users\\rasto\\.nuget\\packages\\grpc.net.client\\2.60.0\\grpc.net.client.2.60.0.nupkg.sha512",
+    "C:\\Users\\rasto\\.nuget\\packages\\grpc.net.common\\2.60.0\\grpc.net.common.2.60.0.nupkg.sha512",
+    "C:\\Users\\rasto\\.nuget\\packages\\grpc.tools\\2.61.0\\grpc.tools.2.61.0.nupkg.sha512",
+    "C:\\Users\\rasto\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\6.0.0\\microsoft.extensions.logging.abstractions.6.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}

@@ -1,0 +1,2 @@
+obj\Debug\net7.0\Protos/Mail.cs \
+obj\Debug\net7.0\Protos/MailGrpc.cs: Protos/Mail.proto

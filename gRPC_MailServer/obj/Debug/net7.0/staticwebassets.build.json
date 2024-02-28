@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "y8U6V8J+GqRnbAU+JfIRHQUGwAgUdl9yj/+VwcFG8zk=",
+  "Source": "gRPC_MailServer",
+  "BasePath": "_content/gRPC_MailServer",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

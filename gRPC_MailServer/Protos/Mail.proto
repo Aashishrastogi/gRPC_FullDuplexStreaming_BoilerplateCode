@@ -1,0 +1,49 @@
+syntax = "proto3";
+
+package Mail;
+
+// This "Service" is Equivalent to the  main class declaration when compared to C#  
+service MailBox {
+/*  In this Mailer is a Function . upon compilation the protobuf compiler automatically will generate a code for a 
+    method name 'Mailer' . which must be Overridden in the inherited class ' MailerService ' which we have 
+    to generate manually
+ */
+  rpc Mailer (stream ForwardMailMessage) returns (stream MailboxMessage);
+  /* 'ForwardMailMessage' and 'MailBoxMessage' are equivalent to a Model class in C# and 
+      It wil get automatically generated  and be available to the service class . Constituents of the model class
+      will be defined here [only names and type .. no size] and the number represent the serialize order of the data 
+      in which they will be transported*/
+}
+message ForwardMailMessage {
+  /*  any message can be empty  */
+}
+message MailboxMessage {
+  /*  Here the 1 2 3 are the serial order in which they will get streamed
+    in case if these are not of type stream (go to declaration) then they will be transmitted as usual*/
+  int32 new = 1;
+  int32 forwarded = 2;
+  Reason reason = 3;
+/*  we can also nest the objects in the message*/
+  enum Reason {
+    Received = 0;
+    Forwarded = 1;
+  }
+}
+
+/*Points to remember which implementing the gRPC 
+ 
+ 1) nuget packages such as GRPC Tools , Google ProtoBuff gRPC .AspNetCore must be Imported prior to the development
+ 
+ 2) The .proj must have The references of the .proto file created before implementing the Service
+    so as the intel sense can detect the keywords and declaration of he methods and model classes in .proto files
+ 
+ 3) On Server side the proto file must be configure to the compile and server only 
+    On client side the proto file must be configured to compile and Client only 
+    by editing in the cs.proj file
+  
+ 4) Server Must Be Run prior to the Client
+ 
+ 5) The API exposed by the server cannot be directly accessed through the web browser as they work on HTTP/1 and 
+   gRPC works on HTTP/2 by default 
+ */
+
